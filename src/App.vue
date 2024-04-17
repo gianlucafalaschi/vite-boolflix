@@ -16,7 +16,14 @@ export default {
     },
     methods: {
       getMoviesFromApi() {
-        alert('chiamata getMoviesFromApi');
+        let apiUrl = 'https://api.themoviedb.org/3/search/movie';
+
+        const queryParams = {
+          api_key: '69f2eb4c4173464dd2ce2e21bf0b9476',
+          /* query: 'ritorno', */
+        };
+
+        
       },
     },
     mounted () {
