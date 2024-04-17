@@ -20,7 +20,9 @@ export default {
 
 <template>
     <div class="container">
-        <MovieCard></MovieCard>
+        <div class="row">
+            <MovieCard></MovieCard>
+        </div>
     </div>
     
 </template>
@@ -29,12 +31,17 @@ export default {
 @use'../style/partials/_variables' as *;
 
 .container {
-    display: flex;
-    gap: 10px;
     background-color: pink;
     padding-top:10px;
     padding-bottom:10px;
     background-color: aqua;
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 </style>
