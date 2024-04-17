@@ -16,7 +16,7 @@ export default {
         <ul>
             <li><span>Titolo:</span> <span>{{ movieInfo.original_title }}</span></li>
             <li><span>Titolo Originale:</span> <span>{{ movieInfo.original_title }}</span></li>
-            <li><span>Lingua:</span> <span>{{ movieInfo.original_language }}</span></li>
+            <li class="language"><span>Lingua:</span> <span>{{ movieInfo.original_language }}</span></li>
             <li><span>Voto:</span> <span>{{ movieInfo.vote_average }}</span> </li>
         </ul>
     </div>
