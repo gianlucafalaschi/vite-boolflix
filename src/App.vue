@@ -15,7 +15,9 @@ export default {
       };
     },
     methods: {
-    
+      getMoviesFromApi() {
+        alert('chiamata getMoviesFromApi');
+      },
     },
     mounted () {
 
@@ -25,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <AppFilter></AppFilter>
+  <AppFilter @searchPerformed="getMoviesFromApi()"></AppFilter>
   <AppMoviesList></AppMoviesList>
 </template>
 

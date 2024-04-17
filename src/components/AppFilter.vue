@@ -21,7 +21,7 @@ export default {
             <input type="text" placeholder="Search movie" v-model="store.searchedName">
         </div>
         <div class="button-container">
-            <button>Search</button>
+            <button @click="$emit('searchPerformed')">Search</button>
         </div>
     </div>
     
