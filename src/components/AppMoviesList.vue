@@ -1,8 +1,14 @@
 <script>
 import { store } from '../store.js';
-    
+import MovieCard from './MovieCard.vue'; 
+
 export default {
     name: 'AppMoviesList',
+    
+    components: {
+        MovieCard,
+    },
+    
     data(){
         return {
             store,
@@ -14,7 +20,7 @@ export default {
 
 <template>
     <div class="container">
-        <h1>sono AppMoviesList</h1>
+        <MovieCard></MovieCard>
     </div>
     
 </template>
