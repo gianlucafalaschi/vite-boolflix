@@ -5,16 +5,19 @@ export default {
     name: 'MovieCard',
     /* CharacterCard accetta un oggetto che chiamo MovieInfo */
     
-    /* props: {
+    props: {
         movieInfo: Object
-    } */
+    }
 }
 </script>
 
 <template>
     <div class="movie-card">
         <ul>
-            <li>Elemento lista</li>
+            <li>Titolo</li>
+            <li>Titolo Originale</li>
+            <li>Lingua</li>
+            <li>Voto</li>
         </ul>
     </div>
 </template>
@@ -36,6 +39,10 @@ export default {
     ul {
         color: white;
         list-style: none;
+
+        li {
+            margin: 10px 0;
+        }
     }
 }
 
