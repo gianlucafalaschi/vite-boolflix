@@ -14,10 +14,10 @@ export default {
 <template>
     <div class="movie-card">
         <ul>
-            <li>Titolo: {{ movieInfo.title }}</li>
-            <li>Titolo Originale: {{ movieInfo.original_title }}</li>
-            <li>Lingua: {{ movieInfo.original_language }}</li>
-            <li>Voto: {{ movieInfo.vote_average }} </li>
+            <li><span>Titolo:</span> <span>{{ movieInfo.original_title }}</span></li>
+            <li><span>Titolo Originale:</span> <span>{{ movieInfo.original_title }}</span></li>
+            <li><span>Lingua:</span> <span>{{ movieInfo.original_language }}</span></li>
+            <li><span>Voto:</span> <span>{{ movieInfo.vote_average }}</span> </li>
         </ul>
     </div>
 </template>
@@ -39,9 +39,14 @@ export default {
     ul {
         color: white;
         list-style: none;
+        
 
         li {
+            display: flex;
+            flex-direction: column;
             margin: 10px 0;
+
+            
         }
     }
 }
