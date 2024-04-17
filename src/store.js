@@ -4,4 +4,8 @@ export const store = reactive({
     /* characters:[],
     archetypes:[],
     selectedArchetype: '' */
+    movies:[],
+    searchedName:[],
+
+
 });
