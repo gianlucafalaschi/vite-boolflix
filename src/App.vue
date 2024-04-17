@@ -2,10 +2,12 @@
 import axios from 'axios';
 import { store } from './store.js';
 import AppFilter from './components/AppFilter.vue';
+import AppMoviesList from './components/AppMoviesList.vue';
 
 export default {
     components: {
       AppFilter,
+      AppMoviesList,
     },
     data() {
       return {
@@ -24,6 +26,7 @@ export default {
 
 <template>
   <AppFilter></AppFilter>
+  <AppMoviesList></AppMoviesList>
 </template>
 
 <style lang="scss">
