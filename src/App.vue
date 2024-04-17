@@ -23,7 +23,16 @@ export default {
           /* query: 'ritorno', */
         };
 
-        
+        if(store.searchedName !== '') {
+          queryParams.query = store.searchedName;
+        }
+        // Prende i movie dall'api e popola lo store
+        axios.get(apiUrl, {
+        params: queryParams
+      })
+      .then((response) => {
+        store.movies = response.data.results;
+      }); 
       },
     },
     mounted () {
