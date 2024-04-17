@@ -17,61 +17,6 @@ export default {
             <li>Elemento lista</li>
         </ul>
     </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
-    <div class="movie-card">
-        <ul>
-            <li>Elemento lista</li>
-        </ul>
-    </div>
 </template>
 
 <style scoped lang="scss">
