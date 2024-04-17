@@ -18,7 +18,7 @@ export default {
             <img src="" alt="logo">
         </div>
         <div class="searchbar-container">
-            <input type="text" placeholder="Search movie">
+            <input type="text" placeholder="Search movie" v-model="store.searchedName">
         </div>
         <div class="button-container">
             <button>Search</button>
