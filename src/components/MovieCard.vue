@@ -14,10 +14,10 @@ export default {
 <template>
     <div class="movie-card">
         <ul>
-            <li>Titolo</li>
-            <li>Titolo Originale</li>
-            <li>Lingua</li>
-            <li>Voto</li>
+            <li>Titolo: {{ movieInfo.title }}</li>
+            <li>Titolo Originale: {{ movieInfo.original_title }}</li>
+            <li>Lingua: {{ movieInfo.original_language }}</li>
+            <li>Voto: {{ movieInfo.vote_average }} </li>
         </ul>
     </div>
 </template>
