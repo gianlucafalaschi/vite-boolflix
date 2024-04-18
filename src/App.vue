@@ -3,11 +3,13 @@ import axios from 'axios';
 import { store } from './store.js';
 import AppFilter from './components/AppFilter.vue';
 import AppMoviesList from './components/AppMoviesList.vue';
+import AppTvList from './components/AppTvList.vue';
 
 export default {
     components: {
       AppFilter,
       AppMoviesList,
+      AppTvList,
     },
     data() {
       return {
@@ -46,6 +48,7 @@ export default {
   <AppFilter @searchPerformed="getMoviesFromApi()"></AppFilter>
   <main>
     <AppMoviesList></AppMoviesList>
+    <AppTvList></AppTvList>
   </main>
   
 </template>
