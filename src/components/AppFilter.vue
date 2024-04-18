@@ -13,17 +13,22 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="logo-container">
-            <img src="" alt="logo">
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1>BOOLFIX</h1>
+            </div>
+            <div class="research">
+                <div class="searchbar-container">
+                    <input type="text" placeholder="Search movie" v-model="store.searchedName">
+                </div>
+                <div class="button-container">
+                    <button @click="$emit('searchPerformed')">Search</button>
+                </div>
+            </div>
         </div>
-        <div class="searchbar-container">
-            <input type="text" placeholder="Search movie" v-model="store.searchedName">
-        </div>
-        <div class="button-container">
-            <button @click="$emit('searchPerformed')">Search</button>
-        </div>
-    </div>
+    </header>
+    
     
 </template>
 
@@ -32,12 +37,20 @@ export default {
 
 .container {
     display: flex;
+    align-items: center;
     gap: 10px;
     background-color: pink;
     padding-top:10px;
     padding-bottom:10px;
 }
 
+.logo-container {
+    color: #E50914;
+}
 
+.research {
+    display: flex;
+    
+}
 
 </style>
