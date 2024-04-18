@@ -78,7 +78,8 @@ export default {
 }
 
 .image-container {
-
+    width: 100%;
+    height: 100%;
     img {
         width: 100%;
     }
