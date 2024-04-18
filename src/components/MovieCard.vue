@@ -19,8 +19,12 @@ export default {
     methods: {
         getImageUrl(name) {
             return new URL(`../assets/img/${name}`, import.meta.url).href;
+        },
+        printStars(averageVote, totalStarsNumber) {
+            for (i = 0; i < totalStarsNumber; i++) {
+                
+            }
         }
-
     },
 
 }
@@ -39,6 +43,8 @@ export default {
             <li v-else-if="cardInfo.original_language == 'it'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('italian-flag.png')" alt=""></span></li>
             <li v-else class="language"><span>Lingua:</span> <span>{{ cardInfo.original_language }}</span></li>
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }}</span> </li>
+            <li><span>Voto:</span> <span>{{ cardInfo.vote_average }} <i class="fa-regular fa-star"></i></span> </li>
+            <li><span>Voto:</span> <span>{{ cardInfo.vote_average }} <i class="fa-solid fa-star"></i></span> </li>
         </ul>
         <div class="image-container">
             <img :src="`${imageBasicUrl}${ImagecardSizeUrl}${cardInfo.poster_path}`" alt="">
