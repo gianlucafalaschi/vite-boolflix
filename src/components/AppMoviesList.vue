@@ -31,7 +31,6 @@ export default {
 @use'../style/partials/_variables' as *;
 
 .container {
-    background-color: pink;
     padding-top:10px;
     padding-bottom:10px;
     background-color: aqua;
