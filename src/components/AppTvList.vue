@@ -21,7 +21,7 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <div v-for="tvShow in store.tvShows">Qui va una moviecard</div>
+            <MovieCard v-for="tvShow in store.tvShows" :cardInfo="tvShow">Qui va una moviecard</MovieCard>
         </div>
     </div>
     

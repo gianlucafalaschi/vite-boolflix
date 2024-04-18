@@ -29,7 +29,8 @@ export default {
 <template>
     <div class="movie-card">
         <ul>
-            <li><span>Titolo:</span> <span>{{ cardInfo.original_title }}</span></li>
+            <li v-if="cardInfo.original_title"><span>Titolo:</span> <span>{{ cardInfo.original_title }}</span></li>
+            <li v-else><span>Titolo:</span> <span>{{ cardInfo.original_name }}</span></li>
             <li><span>Titolo Originale:</span> <span>{{ cardInfo.original_title }}</span></li>
             <li v-if="cardInfo.original_language == 'en'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('english-flag.png')" alt=""></span></li>
             <li v-else-if="cardInfo.original_language == 'fr'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('french-flag.png')" alt=""></span></li>
