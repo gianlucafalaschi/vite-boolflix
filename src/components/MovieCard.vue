@@ -11,7 +11,8 @@ export default {
 
     data() {
       return {
-        
+        imageBasicUrl: 'https://image.tmdb.org/t/p/',
+        ImagecardSizeUrl: 'w342'
       };
     },
 
@@ -40,7 +41,7 @@ export default {
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }}</span> </li>
         </ul>
         <div class="image-container">
-            <img src="https://image.tmdb.org/t/p/w342/exfCO28d5tiKO5luGVOfUuiorvH.jpg" alt="">
+            <img :src="`${imageBasicUrl}${ImagecardSizeUrl}${cardInfo.poster_path}`" alt="">
         </div>
     </div>
 </template>
