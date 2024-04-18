@@ -36,15 +36,37 @@ export default {
         store.movies = response.data.results;
       }); 
       },
+      
+      getTvFromApi() {
+        let apiUrl = 'https://api.themoviedb.org/3/search/tv';
+
+        const queryParams = {
+          api_key: store.api_key,
+        };
+        
+        if(store.searchedName !== '') {
+          queryParams.query = store.searchedName;
+        }
+        // Prende i movie dall'api e popola lo store
+        axios.get(apiUrl, {
+          params: queryParams
+        })
+        .then((response) => {
+          store.tvShows = response.data.results;
+        })
+        
+      },
     },
     mounted () {
-
+      
     }
   }
 
 </script>
 
 <template>
+  <button @click="getTvFromApi()" type="button">serietv</button>
+  <h1>{{ store.tvShows }}</h1>
   <AppFilter @searchPerformed="getMoviesFromApi()"></AppFilter>
   <main>
     <AppMoviesList></AppMoviesList>
