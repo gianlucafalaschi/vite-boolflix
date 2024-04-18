@@ -32,6 +32,7 @@ export default {
             <li><span>Titolo:</span> <span>{{ cardInfo.original_title }}</span></li>
             <li><span>Titolo Originale:</span> <span>{{ cardInfo.original_title }}</span></li>
             <li class="language"><span>Lingua:</span> <span>{{ cardInfo.original_language }}</span></li>
+            <li class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('english-flag.png')" alt=""></span></li>
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }}</span> </li>
         </ul>
     </div>
@@ -61,7 +62,10 @@ export default {
             flex-direction: column;
             margin: 10px 0;
 
-            
+           .flag-image
+           {
+            width: 50%;
+           } 
         }
     }
 }
