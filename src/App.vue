@@ -66,7 +66,6 @@ export default {
 
 <template>
   <button @click="getTvFromApi()" type="button">serietv</button>
-  <h1>{{ store.tvShows }}</h1>
   <AppFilter @searchPerformed="getMoviesFromApi()"></AppFilter>
   <main>
     <AppMoviesList></AppMoviesList>
