@@ -32,6 +32,9 @@ export default {
             <li><span>Titolo:</span> <span>{{ cardInfo.original_title }}</span></li>
             <li><span>Titolo Originale:</span> <span>{{ cardInfo.original_title }}</span></li>
             <li v-if="cardInfo.original_language == 'en'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('english-flag.png')" alt=""></span></li>
+            <li v-else-if="cardInfo.original_language == 'fr'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('french-flag.png')" alt=""></span></li>
+            <li v-else-if="cardInfo.original_language == 'de'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('german-flag.png')" alt=""></span></li>
+            <li v-else-if="cardInfo.original_language == 'it'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('italian-flag.png')" alt=""></span></li>
             <li v-else class="language"><span>Lingua:</span> <span>{{ cardInfo.original_language }}</span></li>
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }}</span> </li>
         </ul>
