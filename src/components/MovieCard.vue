@@ -39,6 +39,9 @@ export default {
             <li v-else class="language"><span>Lingua:</span> <span>{{ cardInfo.original_language }}</span></li>
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }}</span> </li>
         </ul>
+        <div class="image-container">
+            <img src="https://image.tmdb.org/t/p/w342/exfCO28d5tiKO5luGVOfUuiorvH.jpg" alt="">
+        </div>
     </div>
 </template>
 
@@ -71,6 +74,13 @@ export default {
             width: 50%;
            } 
         }
+    }
+}
+
+.image-container {
+
+    img {
+        width: 100%;
     }
 }
 
