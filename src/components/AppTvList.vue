@@ -21,7 +21,7 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            sono la AppTvList
+            <div v-for="tvShow in store.tvShows">Qui va una moviecard</div>
         </div>
     </div>
     
@@ -30,11 +30,10 @@ export default {
 <style scoped lang="scss">
 @use'../style/partials/_variables' as *;
 
-/* .container {
-    background-color: pink;
+.container {
     padding-top:10px;
     padding-bottom:10px;
-    background-color: aqua;
+    background-color: beige;
 }
 
 .row {
@@ -42,6 +41,6 @@ export default {
     margin-right: -10px;
     display: flex;
     flex-wrap: wrap;
-} */
+}
 
 </style>

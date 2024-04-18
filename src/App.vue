@@ -65,13 +65,11 @@ export default {
 </script>
 
 <template>
-  <button @click="getTvFromApi()" type="button">serietv</button>
-  <AppFilter @searchPerformed="getMoviesFromApi()"></AppFilter>
+  <AppFilter @searchPerformed="getMoviesFromApi(),getTvFromApi()"></AppFilter>
   <main>
     <AppMoviesList></AppMoviesList>
     <AppTvList></AppTvList>
   </main>
-  
 </template>
 
 <style lang="scss">
