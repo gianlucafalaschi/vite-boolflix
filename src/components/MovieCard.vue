@@ -7,8 +7,23 @@ export default {
     
     props: {
         cardInfo: Object
-    }
+    },
+
+    data() {
+      return {
+        
+      };
+    },
+
+    methods: {
+        getImageUrl(name) {
+            return new URL(`../assets/img/${name}`, import.meta.url).href;
+        }
+
+    },
+
 }
+    
 </script>
 
 <template>
