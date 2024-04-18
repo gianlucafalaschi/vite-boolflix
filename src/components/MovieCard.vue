@@ -6,7 +6,7 @@ export default {
     /* CharacterCard accetta un oggetto che chiamo MovieInfo */
     
     props: {
-        movieInfo: Object
+        cardInfo: Object
     }
 }
 </script>
@@ -14,10 +14,10 @@ export default {
 <template>
     <div class="movie-card">
         <ul>
-            <li><span>Titolo:</span> <span>{{ movieInfo.original_title }}</span></li>
-            <li><span>Titolo Originale:</span> <span>{{ movieInfo.original_title }}</span></li>
-            <li class="language"><span>Lingua:</span> <span>{{ movieInfo.original_language }}</span></li>
-            <li><span>Voto:</span> <span>{{ movieInfo.vote_average }}</span> </li>
+            <li><span>Titolo:</span> <span>{{ cardInfo.original_title }}</span></li>
+            <li><span>Titolo Originale:</span> <span>{{ cardInfo.original_title }}</span></li>
+            <li class="language"><span>Lingua:</span> <span>{{ cardInfo.original_language }}</span></li>
+            <li><span>Voto:</span> <span>{{ cardInfo.vote_average }}</span> </li>
         </ul>
     </div>
 </template>
