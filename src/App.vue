@@ -19,7 +19,7 @@ export default {
         let apiUrl = 'https://api.themoviedb.org/3/search/movie';
 
         const queryParams = {
-          api_key: '69f2eb4c4173464dd2ce2e21bf0b9476',
+          api_key: store.api_key,
           /* query: 'ritorno', */
         };
 
@@ -44,7 +44,10 @@ export default {
 
 <template>
   <AppFilter @searchPerformed="getMoviesFromApi()"></AppFilter>
-  <AppMoviesList></AppMoviesList>
+  <main>
+    <AppMoviesList></AppMoviesList>
+  </main>
+  
 </template>
 
 <style lang="scss">
