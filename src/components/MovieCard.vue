@@ -95,9 +95,12 @@ export default {
             <li>
                 <ul>
                     <li>Voto:</li> 
-                    <li v-for="(star,index) in stars" class="stars-container">
-                        <i v-if="index < Math.ceil((cardInfo.vote_average) / 2)" class="fa-solid fa-star"></i>
-                        <i v-else class="fa-regular fa-star"></i>
+                    <!-- Stelle Voto -->
+                    <li class="stars-container">
+                        <template v-for="(star,index) in stars" >
+                            <i v-if="index < Math.ceil((cardInfo.vote_average) / 2)" class="fa-solid fa-star"></i>
+                            <i v-else class="fa-regular fa-star"></i>
+                        </template>
                     </li>
                 </ul> 
             </li>
@@ -129,7 +132,6 @@ export default {
 
         li {
             display: flex;
-            flex-direction: column;
             margin: 5px 0;
 
            .flag-image
@@ -147,11 +149,10 @@ export default {
         width: 100%;
     }
 }
-
 .stars-container {
     color: yellow;
-    background-color:coral;
-    
-}
+    display: flex; 
+    flex-wrap: wrap;
+ }
 
 </style>
