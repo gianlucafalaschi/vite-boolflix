@@ -22,16 +22,10 @@ export default {
         getImageUrl(name) {
             return new URL(`../assets/img/${name}`, import.meta.url).href;
         },
-        
-        decimalToFive(numberToTransform) {
-            /* trasforma il voto da 0 a 10 in un numero intero da 0 a 5  */
-            const voteToFivecardInfo = Math.ceil(numberToTransform / 2); 
-            
-        }
 
     },
     mounted() {
-       /* this.decimalToFive(); */
+       
     }
 }
     
@@ -54,7 +48,6 @@ export default {
                 <span v-for="(star,index) in stars" class="stars-container">
                     <i v-if="index < Math.ceil((cardInfo.vote_average) / 2)" class="fa-solid fa-star"></i>
                     <i v-else class="fa-regular fa-star"></i>
-                    <h1>{{ index }}</h1>
                 </span> 
             </li>
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }} <i class="fa-solid fa-star"></i></span> </li>
