@@ -35,29 +35,19 @@ export default {
     <div class="movie-card">
         <ul>  
             <!-- Titolo -->
-            <li v-if="cardInfo.title">
+            <li>
                 <ul>
                     <li>Titolo:</li> 
-                    <li>{{ cardInfo.title }}</li>
+                    <!-- se cardInfo.title esiste (film) stampo cardInfo.title altrimenti stampo cardInfo.name (tv series) -->
+                    <li>{{ cardInfo.title ? cardInfo.title : cardInfo.name }}</li>
                 </ul>
             </li>
-            <li v-else>
-                <ul>
-                    <li>Titolo:</li> 
-                    <li>{{ cardInfo.name }}</li>
-                </ul>
-            </li>
+            
             <!-- Titolo originale -->
-            <li v-if="cardInfo.original_title">
+            <li>
                 <ul>
                     <li>Titolo Originale:</li> 
-                    <li>{{ cardInfo.original_title }}</li>
-                </ul>
-            </li>
-            <li v-else>
-                <ul>
-                    <li>Titolo Originale:</li> 
-                    <li>{{ cardInfo.original_name }}</li>
+                    <li>{{ cardInfo.original_title ? cardInfo.original_title : cardInfo.original_name }}</li>
                 </ul>
             </li>
             <!-- Lingua -->
