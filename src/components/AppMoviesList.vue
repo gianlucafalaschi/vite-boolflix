@@ -20,6 +20,7 @@ export default {
 
 <template>
     <div class="container">
+        <h1>Movies</h1>
         <div class="row">
             <MovieCard v-for="movie in store.movies" :key="movie.id" :cardInfo="movie"></MovieCard>
         </div>

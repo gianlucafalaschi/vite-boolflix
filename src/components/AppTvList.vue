@@ -20,6 +20,7 @@ export default {
 
 <template>
     <div class="container">
+        <h2>TV Series</h2>
         <div class="row">
             <MovieCard v-for="tvShow in store.tvShows" :cardInfo="tvShow">Qui va una moviecard</MovieCard>
         </div>
