@@ -101,6 +101,13 @@ export default {
                     </li>
                 </ul> 
             </li>
+            <!-- Overview -->
+            <li class="overview">
+                <ul>
+                    <li>Overview</li>
+                    <li>{{cardInfo.overview}}</li>
+                </ul>
+            </li>
         </ul>
     </div>
 </template>
