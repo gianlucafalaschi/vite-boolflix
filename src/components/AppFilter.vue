@@ -35,17 +35,23 @@ export default {
 <style scoped lang="scss">
 @use'../style/partials/_variables' as *;
 
+
+header {
+    background-color: $brand-primary;
+}
+
 .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
-    background-color: pink;
+    background-color: $brand-primary;
     padding-top:10px;
     padding-bottom:10px;
 }
 
 .logo-container {
-    color: #E50914;
+    color:$brand-tertiary;
 }
 
 .research {
