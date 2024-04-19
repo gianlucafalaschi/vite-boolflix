@@ -2,7 +2,7 @@
 import { store } from '../store.js';
     
 export default {
-    name: 'AppFilter',
+   // name: 'AppFilter',  Questo non serve piu' nella versione vue corrente
     data(){
         return {
             store,

@@ -2,7 +2,8 @@
 
 
 export default {
-    name: 'MovieCard',
+    // name: 'MovieCard',   Questo non serve piu' nella versione vue corrente
+    
     /* CharacterCard accetta un oggetto che chiamo MovieInfo */
     
     props: {

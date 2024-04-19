@@ -3,7 +3,7 @@ import { store } from '../store.js';
 import MovieCard from './MovieCard.vue'; 
 
 export default {
-    name: 'AppTvList',
+    // name: 'AppTvList',  Questo non serve piu' nella versione vue corrente
     
     components: {
         MovieCard,
