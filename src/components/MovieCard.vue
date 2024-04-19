@@ -25,13 +25,13 @@ export default {
         
         decimalToFive(numberToTransform) {
             /* trasforma il voto da 0 a 10 in un numero intero da 0 a 5  */
-            const voteToFivecardInfo = Math.ceil(numberToTransform / 2);
+            const voteToFivecardInfo = Math.ceil(numberToTransform / 2); 
             
         }
 
     },
     mounted() {
-       this.decimalToFive();
+       /* this.decimalToFive(); */
     }
 }
     
@@ -49,7 +49,14 @@ export default {
             <li v-else-if="cardInfo.original_language == 'it'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('italian-flag.png')" alt=""></span></li>
             <li v-else class="language"><span>Lingua:</span> <span>{{ cardInfo.original_language }}</span></li>
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }}</span> </li>
-            <li><span>Voto:</span> <span class="stars-container" v-for="(star,index) in stars"><i class="fa-regular fa-star"></i></span> </li>
+            <li>
+                <span>Voto:</span> 
+                <span v-for="(star,index) in stars" class="stars-container">
+                    <i v-if="index < Math.ceil((cardInfo.vote_average) / 2)" class="fa-solid fa-star"></i>
+                    <i v-else class="fa-regular fa-star"></i>
+                    <h1>{{ index }}</h1>
+                </span> 
+            </li>
             <li><span>Voto:</span> <span>{{ cardInfo.vote_average }} <i class="fa-solid fa-star"></i></span> </li>
         </ul>
         <div class="image-container">
@@ -99,6 +106,8 @@ export default {
 }
 
 .stars-container {
+    color: yellow;
+    background-color:coral;
     
 }
 
