@@ -93,11 +93,13 @@ export default {
             </li>
             <!-- Voto -->
             <li>
-                <span>Voto:</span> 
-                <span v-for="(star,index) in stars" class="stars-container">
-                    <i v-if="index < Math.ceil((cardInfo.vote_average) / 2)" class="fa-solid fa-star"></i>
-                    <i v-else class="fa-regular fa-star"></i>
-                </span> 
+                <ul>
+                    <li>Voto:</li> 
+                    <li v-for="(star,index) in stars" class="stars-container">
+                        <i v-if="index < Math.ceil((cardInfo.vote_average) / 2)" class="fa-solid fa-star"></i>
+                        <i v-else class="fa-regular fa-star"></i>
+                    </li>
+                </ul> 
             </li>
         </ul>
         <div class="image-container">
