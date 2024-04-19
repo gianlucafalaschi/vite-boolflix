@@ -13,8 +13,8 @@ export default {
       return {
         imageBasicUrl: 'https://image.tmdb.org/t/p/',
         ImagecardSizeUrl: 'w342',
-
-        stars: ['starOne','starTwo', 'starThree', 'starFour', 'starFive'],
+        hovered: false,  // gestisce l'hover del mouse sulle immagini
+        stars: ['starOne','starTwo', 'starThree', 'starFour', 'starFive'], //Gestisce il numero totale di stelle per il voto
       };
     },
 
@@ -32,7 +32,14 @@ export default {
 </script>
 
 <template>
-    <div class="movie-card">
+    <!-- se il mouse non e' sopra l'elemento viene mostrata l'immagine -->
+    <div v-if="!hovered" @mouseover="hovered = true" class="movie-card movie-card-cover">
+        <div class="image-container">
+            <img :src="`${imageBasicUrl}${ImagecardSizeUrl}${cardInfo.poster_path}`" alt="">
+        </div>
+    </div>
+    <!-- se il mouse e' sopra l'elemento viene mostrata la descrizione -->
+    <div v-else @mouseleave="hovered = false" class="movie-card movie-card-info">
         <ul>  
             <!-- Titolo -->
             <li>
@@ -95,9 +102,6 @@ export default {
                 </ul> 
             </li>
         </ul>
-        <div class="image-container">
-            <img :src="`${imageBasicUrl}${ImagecardSizeUrl}${cardInfo.poster_path}`" alt="">
-        </div>
     </div>
 </template>
 
@@ -135,8 +139,11 @@ export default {
 .image-container {
     width: 100%;
     height: 100%;
+    
+
     img {
         width: 100%;
+            
     }
 }
 .stars-container {
