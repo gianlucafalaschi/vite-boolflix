@@ -61,11 +61,36 @@ export default {
                 </ul>
             </li>
             <!-- Lingua -->
-            <li v-if="cardInfo.original_language == 'en'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('english-flag.png')" alt=""></span></li>
-            <li v-else-if="cardInfo.original_language == 'fr'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('french-flag.png')" alt=""></span></li>
-            <li v-else-if="cardInfo.original_language == 'de'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('german-flag.png')" alt=""></span></li>
-            <li v-else-if="cardInfo.original_language == 'it'" class="language"><span>Lingua:</span> <span><img class="flag-image" :src="getImageUrl('italian-flag.png')" alt=""></span></li>
-            <li v-else class="language"><span>Lingua:</span> <span>{{ cardInfo.original_language }}</span></li>
+            <li v-if="cardInfo.original_language == 'en'" class="language">
+                <ul>
+                    <li>Lingua:</li> 
+                    <li><img class="flag-image" :src="getImageUrl('english-flag.png')" alt=""></li>
+                </ul>
+            </li>
+            <li v-else-if="cardInfo.original_language == 'fr'" class="language">
+                <ul>
+                    <li>Lingua:</li> 
+                    <li><img class="flag-image" :src="getImageUrl('french-flag.png')" alt=""></li>
+                </ul>
+            </li>
+            <li v-else-if="cardInfo.original_language == 'de'" class="language">
+                <ul>
+                    <li>Lingua:</li> 
+                    <li><img class="flag-image" :src="getImageUrl('german-flag.png')" alt=""></li>
+                </ul>
+            </li>
+            <li v-else-if="cardInfo.original_language == 'it'" class="language">
+                <ul>
+                    <li>Lingua:</li> 
+                    <li><img class="flag-image" :src="getImageUrl('italian-flag.png')" alt=""></li>
+                </ul>
+            </li>
+            <li v-else class="language">
+                <ul>
+                    <li>Lingua:</li> 
+                    <li>{{ cardInfo.original_language }}</li>
+                </ul>
+            </li>
             <!-- Voto -->
             <li>
                 <span>Voto:</span> 
