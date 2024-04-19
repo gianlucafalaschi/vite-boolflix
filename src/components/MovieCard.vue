@@ -23,9 +23,15 @@ export default {
             return new URL(`../assets/img/${name}`, import.meta.url).href;
         },
         
+        decimalToFive(numberToTransform) {
+            /* trasforma il voto da 0 a 10 in un numero intero da 0 a 5  */
+            const voteToFivecardInfo = Math.ceil(numberToTransform / 2);
+            
+        }
+
     },
     mounted() {
-       
+       this.decimalToFive();
     }
 }
     
