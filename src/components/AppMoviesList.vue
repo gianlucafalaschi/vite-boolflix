@@ -1,39 +1,47 @@
 <script>
 import { store } from '../store.js';
-import MovieCard from './MovieCard.vue'; 
+import MovieCard from './MovieCard.vue';
 
 export default {
     // name: 'AppMoviesList', Questo non serve piu' nella versione vue corrente
-    
+
     components: {
         MovieCard,
     },
-    
-    data(){
+
+    data() {
         return {
             store,
-            
+
         };
     }
 }
 </script>
 
 <template>
-    <div class="container">
-        <h1>Movies</h1>
-        <div class="row">
-            <MovieCard v-for="movie in store.movies" :key="movie.id" :cardInfo="movie"></MovieCard>
+    <section class="movies-section">
+        <div class="container">
+            <h2>Movies</h2>
+            <div class="row">
+                <MovieCard v-for="movie in store.movies" :key="movie.id" :cardInfo="movie"></MovieCard>
+            </div>
         </div>
-    </div>
-    
+    </section>
+
+
 </template>
 
 <style scoped lang="scss">
 @use'../style/partials/_variables' as *;
 
+
+.movies-section {
+    background-color: $brand-secondary;
+}
+
 .container {
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: aqua;
 }
 
@@ -43,5 +51,4 @@ export default {
     display: flex;
     flex-wrap: wrap;
 }
-
 </style>
