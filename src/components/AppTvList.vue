@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <section class="tv-series-section">
+    <section v-if="store.tvShows.length > 0" class="tv-series-section">
         <div class="container">
             <h2>TV Series</h2>
             <div class="row">
@@ -40,7 +40,7 @@ export default {
 .container {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: beige;
+    background-color: transparent;
 }
 
 .row {

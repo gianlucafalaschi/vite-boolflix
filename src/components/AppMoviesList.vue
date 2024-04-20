@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <section class="movies-section">
+    <section v-if="store.movies.length > 0" class="movies-section">
         <div class="container">
             <h2>Movies</h2>
             <div class="row">
@@ -42,7 +42,7 @@ export default {
 .container {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: aqua;
+    background-color: transparent;
 }
 
 .row {
