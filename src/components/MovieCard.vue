@@ -124,8 +124,9 @@ export default {
 
 
 
-.movie-card {
-    width: calc((100% / 6) - 12px);
+.movie-card-cover, .movie-card-info {
+    /* width: calc((100% / 6) - 12px); */
+    width: 100%;
     border: 1px solid white;
     background-color: black;
     padding: 10px;
@@ -163,5 +164,45 @@ export default {
     display: flex; 
     flex-wrap: wrap;
  }
+
+
+/* MEDIA QUERIES */
+
+/*----------------
+    COLUMNS per XS > 0px
+-----------------*/
+
+
+/*----------------
+    COLUMNS per SM >= 576px
+-----------------*/
+@media screen and (min-width: 576px) {
+
+    .movie-card-cover, .movie-card-info {
+        width: calc((100% / 2) - 12px);
+    }
+
+}
+
+/*----------------
+COLUMNS per MD >= 768px
+-----------------*/
+@media screen and (min-width: 768px) {
+
+.movie-card-cover, .movie-card-info {
+    width: calc((100% / 4) - 12px);
+    }
+
+}
+/*----------------
+COLUMNS per LG >= 992px
+-----------------*/
+@media screen and (min-width: 992px) {
+
+    .movie-card-cover, .movie-card-info {
+    width: calc((100% / 6) - 12px);
+    }
+
+}
 
 </style>
