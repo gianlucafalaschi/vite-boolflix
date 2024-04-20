@@ -6,9 +6,17 @@ export default {
     data(){
         return {
             store,
+
+
             
         };
-    }
+    },
+    methods: {
+        /* Funzione che piulisce il campo input della ricerca del film */
+        cleanSearchBox() {
+            store.searchedName = '';
+        }
+    },
 }
 </script>
 
@@ -20,10 +28,12 @@ export default {
             </div>
             <div class="research">
                 <div class="searchbar-container">
-                    <input type="text" placeholder="Search movie" v-model="store.searchedName">
+                    <input class="search-input" type="text" placeholder="Search movie" v-model="store.searchedName">
                 </div>
                 <div class="button-container">
-                    <button @click="$emit('searchPerformed')">Search</button>
+                    <!-- Quando il pulsante viene premuto emette un evento chiamato searchPerformed, 
+                        inoltre chiama la funzione cleanSearchBox() che pulisce il box dell'input  -->
+                    <button class="search-button" @click="$emit('searchPerformed'), cleanSearchBox()">Search</button>
                 </div>
             </div>
         </div>
@@ -59,4 +69,13 @@ header {
     
 }
 
+.search-input {
+    padding: 4px 6px;
+    border-radius: 2%;
+}
+
+.search-button {
+    padding:4px 6px;
+    border-radius: 2%;
+}
 </style>
