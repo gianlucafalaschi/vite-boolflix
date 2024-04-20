@@ -21,7 +21,7 @@ export default {
 <template>
     <section v-if="store.tvShows.length > 0" class="tv-series-section">
         <div class="container">
-            <h2>TV Series</h2>
+            <h2 class="title">TV Series</h2>
             <div class="row">
                 <MovieCard v-for="tvShow in store.tvShows" :cardInfo="tvShow">Qui va una moviecard</MovieCard>
             </div>
@@ -48,5 +48,9 @@ export default {
     margin-right: -10px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.title {
+    color: white;
 }
 </style>

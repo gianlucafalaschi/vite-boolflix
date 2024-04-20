@@ -21,7 +21,7 @@ export default {
 <template>
     <section v-if="store.movies.length > 0" class="movies-section">
         <div class="container">
-            <h2>Movies</h2>
+            <h2 class="title">Movies</h2>
             <div class="row">
                 <MovieCard v-for="movie in store.movies" :key="movie.id" :cardInfo="movie"></MovieCard>
             </div>
@@ -50,5 +50,9 @@ export default {
     margin-right: -10px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.title {
+    color: white;
 }
 </style>
