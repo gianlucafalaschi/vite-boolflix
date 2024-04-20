@@ -15,7 +15,7 @@ export default {
         imageBasicUrl: 'https://image.tmdb.org/t/p/',
         ImagecardSizeUrl: 'w342',
         hovered: false,  // gestisce l'hover del mouse sulle immagini
-        stars: ['starOne','starTwo', 'starThree', 'starFour', 'starFive'], //Gestisce il numero totale di stelle per il voto
+        stars: [], //Gestisce il numero totale di stelle per il voto
       };
     },
 
@@ -23,10 +23,15 @@ export default {
         getImageUrl(name) {
             return new URL(`../assets/img/${name}`, import.meta.url).href;
         },
-
+        getStars() {
+            for (let i = 0; i < 5; i++) {
+                this.stars.push('star')
+                console.log(this.stars)
+            };
+        }
     },
     mounted() {
-       
+       this.getStars()
     }
 }
     
