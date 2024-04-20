@@ -64,7 +64,7 @@ export default {
         </div>
     </div>
     <!-- se il mouse e' sopra l'elemento viene mostrata la descrizione -->
-    <div v-else @mouseleave="hovered = false" class="movie-card movie-card-info">
+    <div v-else  @mouseleave="hovered = false" class="movie-card movie-card-info">
         <ul>  
             <!-- Titolo -->
             <li>
@@ -110,7 +110,7 @@ export default {
             <li class="overview">
                 <ul>
                     <li>Overview</li>
-                    <li>{{cardInfo.overview}}</li>
+                    <li class="overview-text">{{cardInfo.overview}}</li>
                 </ul>
             </li>
         </ul>
@@ -127,10 +127,12 @@ export default {
 .movie-card-cover, .movie-card-info {
     /* width: calc((100% / 6) - 12px); */
     width: 100%;
+    max-height: 300px;
     border: 1px solid white;
     background-color: black;
     padding: 10px;
     margin: 6px 6px;
+    overflow-y: auto;
 
     ul {
         color: white;
@@ -164,6 +166,7 @@ export default {
     display: flex; 
     flex-wrap: wrap;
  }
+
 
 
 /* MEDIA QUERIES */
