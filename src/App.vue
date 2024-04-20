@@ -74,4 +74,9 @@ export default {
 
 <style lang="scss">
 @use'./style/generic';
+@use'./style/partials/_variables' as *;
+main {
+  background-color: $brand-secondary;
+  height: 100vh;
+}
 </style>
