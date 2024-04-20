@@ -15,7 +15,8 @@ export default {
         imageBasicUrl: 'https://image.tmdb.org/t/p/',
         ImagecardSizeUrl: 'w342',
         hovered: false,  // gestisce l'hover del mouse sulle immagini
-        stars: [], //Gestisce il numero totale di stelle per il voto
+        starsFull: [], // Array inizialmente vuoto che gestisce il numero totale di stelle piene per il voto
+        starsEmpty: [], // Array inizialmente vuoto che gestisce il numero totale di stelle vuote per il voto
       };
     },
 
@@ -23,10 +24,17 @@ export default {
         getImageUrl(name) {
             return new URL(`../assets/img/${name}`, import.meta.url).href;
         },
-        getStars() {
+        getStars() {   
+            /* Funzione che determina il numero di stelle per il voto */
             for (let i = 0; i < 5; i++) {
-                this.stars.push('star')
-                console.log(this.stars)
+                /* se l'indice i e minore del voto 1 a 10 (diviso 2 3 arrotondato per eccesso)
+                allora pusha un elemento nell'array starsFull */
+                if (i < Math.ceil((this.cardInfo.vote_average) / 2)) {
+                    this.starsFull.push('starFull');
+                    /* altrimenti pusha un elemento nell'array starsEmpty */
+                } else {
+                    this.starsEmpty.push('starEmpty');
+                }
             };
         }
     },
@@ -100,10 +108,10 @@ export default {
                     <li>Voto:</li> 
                     <!-- Stelle Voto -->
                     <li class="stars-container">
-                        <template v-for="(star,index) in stars" >
-                            <i v-if="index < Math.ceil((cardInfo.vote_average) / 2)" class="fa-solid fa-star"></i>
-                            <i v-else class="fa-regular fa-star"></i>
-                        </template>
+                        <!-- stampa in font awesome (stella piena) per ogni elemento nell'array starsFull  -->
+                        <i v-for="elementStarFull in starsFull" class="fa-solid fa-star"></i>
+                        <!-- stampa in font awesome (stella piena) per ogni elemento nell'array starsEmpty  -->
+                        <i v-for="elementStarEmpty in starsEmpty" class="fa-regular fa-star"></i>
                     </li>
                 </ul> 
             </li>
