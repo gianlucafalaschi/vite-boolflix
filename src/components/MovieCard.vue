@@ -12,6 +12,12 @@ export default {
 
     data() {
       return {
+        supportedFlags:[
+            'it',
+            'en',
+            'fr',
+            'de'
+        ],
         imageBasicUrl: 'https://image.tmdb.org/t/p/',
         ImagecardSizeUrl: 'w342',
         hovered: false,  // gestisce l'hover del mouse sulle immagini
@@ -21,8 +27,13 @@ export default {
     },
 
     methods: {
-        getImageUrl(name) {
-            return new URL(`../assets/img/${name}`, import.meta.url).href;
+        
+        getFlagUrl(){
+            /* crea una variabile usando l'original language ricavato dalla API + .png */
+            let flagImageName = this.cardInfo.original_language + '.png';
+            /* Usa questa variabile nella funzione che
+            permette di usare l'url delle immagini salvete in locale quando usate dinamicamente */
+            return new URL(`../assets/img/${flagImageName}`, import.meta.url).href;
         },
         getStars() {   
             /* Funzione che determina il numero di stelle per il voto */
@@ -72,34 +83,14 @@ export default {
                 </ul>
             </li>
             <!-- Lingua -->
-            <li v-if="cardInfo.original_language == 'en'" class="language">
+            <li>
                 <ul>
-                    <li>Lingua:</li> 
-                    <li><img class="flag-image" :src="getImageUrl('english-flag.png')" alt=""></li>
-                </ul>
-            </li>
-            <li v-else-if="cardInfo.original_language == 'fr'" class="language">
-                <ul>
-                    <li>Lingua:</li> 
-                    <li><img class="flag-image" :src="getImageUrl('french-flag.png')" alt=""></li>
-                </ul>
-            </li>
-            <li v-else-if="cardInfo.original_language == 'de'" class="language">
-                <ul>
-                    <li>Lingua:</li> 
-                    <li><img class="flag-image" :src="getImageUrl('german-flag.png')" alt=""></li>
-                </ul>
-            </li>
-            <li v-else-if="cardInfo.original_language == 'it'" class="language">
-                <ul>
-                    <li>Lingua:</li> 
-                    <li><img class="flag-image" :src="getImageUrl('italian-flag.png')" alt=""></li>
-                </ul>
-            </li>
-            <li v-else class="language">
-                <ul>
-                    <li>Lingua:</li> 
-                    <li>{{ cardInfo.original_language }}</li>
+                    <li>Lingua:</li>
+                    <!-- se l'array delle lingue supportate include la lingua ricavata dall'Api per original_language
+                    stampo l'immagine con src ricavato dalla funzione getFlagUrl() -->
+                    <li v-if="supportedFlags.includes(cardInfo.original_language)"><img class="flag-image" :src="getFlagUrl()" alt=""></li>
+                    <!-- Altrimenti stampo il testo dell'original language ricavato dall'Api -->
+                    <li v-else>{{ cardInfo.original_language }}</li>
                 </ul>
             </li>
             <!-- Voto -->
