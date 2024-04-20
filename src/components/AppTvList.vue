@@ -1,39 +1,45 @@
 <script>
 import { store } from '../store.js';
-import MovieCard from './MovieCard.vue'; 
+import MovieCard from './MovieCard.vue';
 
 export default {
     // name: 'AppTvList',  Questo non serve piu' nella versione vue corrente
-    
+
     components: {
         MovieCard,
     },
-    
-    data(){
+
+    data() {
         return {
             store,
-            
+
         };
     }
 }
 </script>
 
 <template>
-    <div class="container">
-        <h2>TV Series</h2>
-        <div class="row">
-            <MovieCard v-for="tvShow in store.tvShows" :cardInfo="tvShow">Qui va una moviecard</MovieCard>
+    <section class="tv-series-section">
+        <div class="container">
+            <h2>TV Series</h2>
+            <div class="row">
+                <MovieCard v-for="tvShow in store.tvShows" :cardInfo="tvShow">Qui va una moviecard</MovieCard>
+            </div>
         </div>
-    </div>
-    
+    </section>
 </template>
 
 <style scoped lang="scss">
 @use'../style/partials/_variables' as *;
 
+
+.tv-series-section {
+    background-color: $brand-secondary;
+}
+
 .container {
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: beige;
 }
 
@@ -43,5 +49,4 @@ export default {
     display: flex;
     flex-wrap: wrap;
 }
-
 </style>
