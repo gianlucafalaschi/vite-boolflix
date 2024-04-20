@@ -60,7 +60,11 @@ export default {
     <!-- se il mouse non e' sopra l'elemento viene mostrata l'immagine -->
     <div v-if="!hovered" @mouseover="hovered = true" class="movie-card movie-card-cover">
         <div class="image-container">
-            <img :src="`${imageBasicUrl}${ImagecardSizeUrl}${cardInfo.poster_path}`" alt="">
+            <img v-if="cardInfo.poster_path" :src="`${imageBasicUrl}${ImagecardSizeUrl}${cardInfo.poster_path}`" alt="">
+            <div v-else class="missing-image">
+                <div>{{cardInfo.title ? cardInfo.title : cardInfo.name}}</div>
+                <div>Image not available</div>
+            </div>
         </div>
     </div>
     <!-- se il mouse e' sopra l'elemento viene mostrata la descrizione -->
@@ -155,6 +159,14 @@ export default {
     width: 100%;
     height: 100%;
     
+    .missing-image {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+    }
 
     img {
         width: 100%;
