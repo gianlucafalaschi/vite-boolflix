@@ -38,7 +38,7 @@ export default {
         getStars() {   
             /* Funzione che determina il numero di stelle per il voto */
             for (let i = 0; i < 5; i++) {
-                /* se l'indice i e minore del voto 1 a 10 (diviso 2 3 arrotondato per eccesso)
+                /* se l'indice i e minore del voto 1 a 10 (diviso 2 e arrotondato per eccesso)
                 allora pusha un elemento nell'array starsFull */
                 if (i < Math.ceil((this.cardInfo.vote_average) / 2)) {
                     this.starsFull.push('starFull');
