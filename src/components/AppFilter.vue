@@ -27,14 +27,10 @@ export default {
                 <h1>BOOLFIX</h1>
             </div>
             <div class="research">
-                <div class="searchbar-container">
-                    <input class="search-input" type="text" placeholder="Search movie" v-model="store.searchedName">
-                </div>
-                <div class="button-container">
-                    <!-- Quando il pulsante viene premuto emette un evento chiamato searchPerformed, 
-                        inoltre chiama la funzione cleanSearchBox() che pulisce il box dell'input  -->
-                    <button class="search-button" @click="$emit('searchPerformed'), cleanSearchBox()">Search</button>
-                </div>
+                <input class="search-input" type="text" placeholder="Search movie" v-model="store.searchedName">
+                <!-- Quando il pulsante viene premuto emette un evento chiamato searchPerformed, 
+                    inoltre chiama la funzione cleanSearchBox() che pulisce il box dell'input  -->
+                <button class="search-button" @click="$emit('searchPerformed'), cleanSearchBox()">Search</button>
             </div>
         </div>
     </header>
@@ -66,16 +62,22 @@ header {
 
 .research {
     display: flex;
-    
+    gap: 10px;
 }
 
 .search-input {
     padding: 4px 6px;
-    border-radius: 2%;
+    border-radius: 20px;
+    border: none;
 }
 
 .search-button {
     padding:4px 6px;
-    border-radius: 2%;
+    color: white;
+    background-color: #E50914;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
 </style>
