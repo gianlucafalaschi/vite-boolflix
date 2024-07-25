@@ -66,18 +66,18 @@ header {
 }
 
 .search-input {
-    padding: 4px 6px;
-    border-radius: 20px;
+    padding: 6px 8px;
+    border-radius: 5px;
     border: none;
 }
 
 .search-button {
-    padding:4px 6px;
+    padding:6px 8px;
     color: white;
     background-color: #E50914;
     font-weight: bold;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 </style>
