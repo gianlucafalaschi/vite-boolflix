@@ -4,12 +4,15 @@ import { store } from './store.js';
 import AppFilter from './components/AppFilter.vue';
 import AppMoviesList from './components/AppMoviesList.vue';
 import AppTvList from './components/AppTvList.vue';
+import AppHero from './components/AppHero.vue';
+
 
 export default {
     components: {
       AppFilter,
       AppMoviesList,
       AppTvList,
+      AppHero,
     },
     data() {
       return {
@@ -67,6 +70,7 @@ export default {
 <template>
   <AppFilter @searchPerformed="getMoviesFromApi(),getTvFromApi()"></AppFilter>
   <main>
+    <AppHero></AppHero>
     <AppMoviesList></AppMoviesList>
     <AppTvList></AppTvList>
   </main>
