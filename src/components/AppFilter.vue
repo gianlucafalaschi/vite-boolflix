@@ -12,10 +12,16 @@ export default {
         };
     },
     methods: {
-        /* Funzione che piulisce il campo input della ricerca del film */
+        /* Funzione che pulisce il campo input della ricerca del film */
         cleanSearchBox() {
             store.searchedName = '';
+        },
+        /* Funzione che svuota i risultati della ricerca nello store */
+        cleanSearchResults() {
+            store.movies = [];
+            store.tvShows = [];
         }
+
     },
 }
 </script>
@@ -23,7 +29,7 @@ export default {
 <template>
     <header>
         <div class="container">
-            <div class="logo-container">
+            <div class="logo-container" @click="cleanSearchResults">
                 <h1>BOOLFIX</h1>
             </div>
             <div class="research">
@@ -58,6 +64,7 @@ header {
 
 .logo-container {
     color:$brand-tertiary;
+    cursor: pointer;
 }
 
 .research {

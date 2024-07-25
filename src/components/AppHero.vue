@@ -37,7 +37,7 @@ export default {
 @use'../style/partials/_variables' as *;
 
 .background-img-container {
-    background-image: url('../assets/img/wojtek-witkowski-h7rOzTmGxWE-unsplash.jpg');
+    background-image: url('../assets/img/hero-img.jpg');
     background-position: center;
     background-size:cover;
     height: 400px;
