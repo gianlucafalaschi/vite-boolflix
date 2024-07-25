@@ -117,7 +117,7 @@ export default {
             <!-- Overview -->
             <li class="overview">
                 <ul>
-                    <li>Overview</li>
+                    <li>Overview:</li>
                     <li class="overview-text">{{cardInfo.overview}}</li>
                 </ul>
             </li>
@@ -130,7 +130,9 @@ export default {
 
 
 
-
+.movie-card-info {
+    overflow-y: auto;
+}
 
 .movie-card-cover, .movie-card-info {
     /* width: calc((100% / 6) - 12px); */
@@ -140,7 +142,6 @@ export default {
     background-color: black;
     padding: 10px;
     margin: 6px 6px;
-    overflow-y: auto;
 
     ul {
         color: white;
@@ -162,6 +163,7 @@ export default {
 .image-container {
     width: 100%;
     height: 100%;
+
     
     .missing-image {
         color: white;
@@ -174,6 +176,7 @@ export default {
 
     img {
         width: 100%;
+        height: 100%;
             
     }
 }
