@@ -60,6 +60,7 @@ header {
     background-color: $brand-primary;
     padding-top:10px;
     padding-bottom:10px;
+    height: 70px;
 }
 
 .logo-container {

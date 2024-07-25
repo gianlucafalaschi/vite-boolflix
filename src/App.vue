@@ -81,6 +81,6 @@ export default {
 @use'./style/partials/_variables' as *;
 main {
   background-color: $brand-primary;
-  height: 100vh;
+  height: calc(100vh - 70px);
 }
 </style>
