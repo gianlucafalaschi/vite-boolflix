@@ -1,0 +1,2 @@
+A web page that allows users to view a catalogue of movies, retrieved via an API call. The films can be filtered by name, and when hovering over each film, its details are displayed.
+Technologies used: HTML - CSS - Vue.JS - Vite
