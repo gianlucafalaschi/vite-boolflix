@@ -36,7 +36,7 @@ export default {
 
 
 .movies-section {
-    background-color: $brand-secondary;
+    background-color: $brand-primary;
 }
 
 .container {

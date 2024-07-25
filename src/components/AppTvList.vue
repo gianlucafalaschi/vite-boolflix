@@ -34,7 +34,7 @@ export default {
 
 
 .tv-series-section {
-    background-color: $brand-secondary;
+    background-color:$brand-primary;
 }
 
 .container {

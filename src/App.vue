@@ -76,7 +76,7 @@ export default {
 @use'./style/generic';
 @use'./style/partials/_variables' as *;
 main {
-  background-color: $brand-secondary;
+  background-color: $brand-primary;
   height: 100vh;
 }
 </style>
