@@ -139,6 +139,7 @@ export default {
     width: 100%;
     max-height: 300px;
     border: 1px solid white;
+    border-radius: 5px;
     background-color: black;
     padding: 10px;
     margin: 6px 6px;
@@ -159,6 +160,14 @@ export default {
         }
     }
 }
+
+.movie-card-cover, .movie-card-info {
+    &:hover {
+        border: 2px solid white;
+    }
+}
+
+
 
 .image-container {
     width: 100%;
