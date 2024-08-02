@@ -33,7 +33,7 @@ export default {
                 <h1>BOOLFIX</h1>
             </div>
             <div class="research">
-                <input class="search-input" type="text" placeholder="Search movie" v-model="store.searchedName">
+                <input class="search-input" @keyup.enter="$emit('searchPerformed'), cleanSearchBox()" type="text" placeholder="Search movie" v-model="store.searchedName">
                 <!-- Quando il pulsante viene premuto emette un evento chiamato searchPerformed, 
                     inoltre chiama la funzione cleanSearchBox() che pulisce il box dell'input  -->
                 <button class="search-button" @click="$emit('searchPerformed'), cleanSearchBox()">Search</button>
