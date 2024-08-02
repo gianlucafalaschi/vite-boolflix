@@ -129,14 +129,13 @@ export default {
 @use'../style/partials/_variables' as *;
 
 
-
 .movie-card-info {
     overflow-y: auto;
+    scrollbar-width: 1px;
 }
 
 .movie-card-cover, .movie-card-info {
-    /* width: calc((100% / 6) - 12px); */
-    width: 100%;
+    width: calc((100% / 2) - 12px);
     max-height: 300px;
     border: 1px solid white;
     border-radius: 5px;
@@ -161,12 +160,17 @@ export default {
     }
 }
 
+/*  Cards Hover */
 .movie-card-cover, .movie-card-info {
     &:hover {
         border: 2px solid white;
     }
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+/*  */
 
 
 .image-container {
@@ -209,8 +213,8 @@ export default {
 -----------------*/
 @media screen and (min-width: 576px) {
 
-    .movie-card-cover, .movie-card-info {
-        width: calc((100% / 2) - 12px);
+.movie-card-cover, .movie-card-info {
+    width: calc((100% / 3) - 12px);
     }
 
 }
@@ -229,6 +233,17 @@ COLUMNS per MD >= 768px
 COLUMNS per LG >= 992px
 -----------------*/
 @media screen and (min-width: 992px) {
+
+    .movie-card-cover, .movie-card-info {
+    width: calc((100% / 5) - 12px);
+    }
+
+}
+
+/*----------------
+COLUMNS per XL >= 1200px
+-----------------*/
+@media screen and (min-width: 1200px) {
 
     .movie-card-cover, .movie-card-info {
     width: calc((100% / 6) - 12px);
